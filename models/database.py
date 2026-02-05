@@ -8,6 +8,16 @@ import os
 load_dotenv()
 DB_PATH = os.getenv('DB', './data/tarefas.sqlite3')
 
+def init_db(db_name: str = DB_PATH) -> None:
+    with connect(db_name) as conn:
+        conn.execute("""
+        CREATE TABLE IF NOT EXISTS tarefas (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            titulo_tarefa TEXT NOT NULL,
+            data_conclusao TEXT
+        );
+        """)
+
 class Database:
     """
         Classe para gerenciar conexões e operações com um banco de dados SQLite.
