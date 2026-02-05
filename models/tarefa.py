@@ -3,6 +3,9 @@ from typing import Self, Any, Optional
 from sqlite3 import Cursor
 
 class Tarefa:
+    """
+        Classe para representar uma tarefa, com métodos para salvar, obter, excluir e atualizar tarefas em um banco de dados SQLite, usando a classe `Database`.
+    """
     def __init__(self: Self, titulo_tarefa: Optional[str], data_conclusao: Optional[str] = None, id_tarefa: Optional[int] = None) -> None:
         self.titulo_tarefa: Optional[str] = titulo_tarefa
         self.data_conclusao: Optional[str] = data_conclusao
