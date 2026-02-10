@@ -8,7 +8,7 @@ init_db()
 
 @app.route('/')
 def home():
-    return render_template('home.html', titulo='Home')
+    return redirect(url_for('agenda'))
 
 @app.route('/agenda', methods=['GET', 'POST'])
 def agenda():
