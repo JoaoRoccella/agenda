@@ -1,5 +1,7 @@
 # Ambiente virtual
 .venv/
+venv/
+agenda-venv/
 
 # Arquivos compilados do Python
 __pycache__/
@@ -13,3 +15,6 @@ data/
 
 # Variáveis de ambiente
 .env
+
+# Desenvolvimento
+.vscode/
