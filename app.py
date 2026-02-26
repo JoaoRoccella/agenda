@@ -8,7 +8,6 @@ init_db()
 
 
 @app.route("/", methods=["GET", "POST"])
-@app.route("/agenda", methods=["GET", "POST"])
 def agenda():
     tarefas = None
 
