@@ -10,6 +10,12 @@ DB_PATH = os.getenv("DATABASE", "./data/tarefas.sqlite3")
 
 
 def init_db(db_name: str = DB_PATH) -> None:
+
+    data_dir = os.path.join(os.getcwd(), "data")
+
+    if not os.path.exists(data_dir):
+        os.makedirs(data_dir, exist_ok=True)
+
     with connect(db_name) as conn:
         conn.execute("""
         CREATE TABLE IF NOT EXISTS tarefas (
