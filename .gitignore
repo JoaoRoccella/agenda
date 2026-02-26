@@ -9,12 +9,12 @@ __pycache__/
 
 # Banco de dados SQLite
 data/
-*.db
 *.sqlite
+*.db
 *.sqlite3
+*.db3
+*.sdb
+*.s3db
 
 # Variáveis de ambiente
 .env
-
-# Desenvolvimento
-.vscode/
